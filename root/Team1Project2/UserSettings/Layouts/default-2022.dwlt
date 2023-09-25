@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 36
+  controlID: 49
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 100
+  controlID: 99
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -380,7 +380,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Materials
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -388,15 +388,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\SGD\DesignII_RevengeGame\Group1Project2\root\Team1Project2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 42060000
-    m_LastClickedID: 1602
+    m_SelectedIDs: 9afb0000
+    m_LastClickedID: 64410
     m_ExpandedIDs: 000000000206000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -963,9 +963,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 30.731972, y: 6.4474187, z: -13.39353}
+    m_Target: {x: 63.9606, y: 4.6226788, z: -5.6168413}
     speed: 2
-    m_Value: {x: 30.731972, y: 6.4474187, z: -13.39353}
+    m_Value: {x: 63.9606, y: 4.6226788, z: -5.6168413}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1011,9 +1011,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08417927, y: -0.024784552, z: 0.0023567493, w: -0.9960962}
+    m_Target: {x: 0.10633618, y: -0.17946534, z: 0.019426228, w: 0.97774017}
     speed: 2
-    m_Value: {x: -0.084186345, y: -0.023291387, z: 0.0022305741, w: -0.9961753}
+    m_Value: {x: 0.10637219, y: -0.17801024, z: 0.01926797, w: 0.97807264}
   m_Size:
     m_Target: 2.503123
     speed: 2
@@ -1023,8 +1023,8 @@ MonoBehaviour:
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 1.0050001
+    m_SpeedNormalized: 0.50000006
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -1082,7 +1082,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c0a4fdff58affdff38befdff0ebffdff34d8fdff06dafdffc2dafdffb87efeff727ffeff1c80feff6682feff
+      m_ExpandedIDs: b0dcfcff60ddfcffe044feffc045feff9046feff0c49feff3080feff5082feffdac80000cac900001cd3000096d30000baf70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
