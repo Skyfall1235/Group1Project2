@@ -51,20 +51,27 @@ public class KeyAndLock : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("colliding?");
+        //Debug.Log("colliding?");
         if (other.gameObject.tag != "Player")
         {
             Debug.Log("not a player");
             return;
         }
-        Debug.Log("object is hitting wall");
+        //Debug.Log("object is hitting wall");
         PlayerInteraction interaction = other.gameObject.GetComponent<PlayerInteraction>();
         Debug.Log("finding interaction");
         if (interaction != null)
         {
             Debug.Log("searching for key");
+            if (interaction.collectedKeyItems.Count <= 0) 
+            {
+                textBox.SetActive(true);
+                StartCoroutine(WaitSecondsThenTurnOff(5f, textBox));
+                return;
+            }
             foreach (KeyItem keyItem in interaction.collectedKeyItems)
             {
+                Debug.Log("checking each item in the colelcted keys");
                 if (keyItem.ID == lockID)
                 {
                     unlocked = true;
