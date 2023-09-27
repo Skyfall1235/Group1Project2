@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         Debug.DrawLine(m_GroundCheck.transform.position, m_GroundCheck.transform.position + Vector3.down * 0.1f, Color.red, 0.1f);
         if (Physics.Raycast(m_GroundCheck.transform.position, Vector3.down, out hit, 0.1f))
         {
-            Debug.Log(hit.collider.tag);
+            //Debug.Log(hit.collider.tag);
             if (hit.collider.tag == "Ground")
             {
                 m_Grounded = true;

@@ -147,7 +147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2aa7bfa87d98c4cb49bc17e23491a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_sceneNames: []
+  m_sceneNames:
+  - m_sceneName: 
+    m_isPersistant: 0
+  - m_sceneName: 
+    m_isPersistant: 0
+  - m_sceneName: 
+    m_isPersistant: 0
   m_fadeImage: {fileID: 3587366895680090534}
   m_canvas: {fileID: 631333503552649188}
   m_fadeDuration: 1

@@ -28,22 +28,7 @@ using UnityEngine.UI;
 public class AsyncLoader : MonoBehaviour
 {
     #region Member Variables
-    /// <summary>
-    /// Struct for containing the data about all useable scenes in the game.
-    /// </summary>
-    [System.Serializable]
-    public struct DefinedSceneData
-    {
-        /// <summary>
-        /// The name of the Scene as a string.
-        /// </summary>
-        public string m_sceneName;
-        /// <summary>
-        /// A toggle for labeling which scenes are persistant.
-        /// </summary>
-        public bool m_isPersistant;
-    }
-
+    
     /// <summary>
     /// A list of scene names to be used during loading and unloading operations.
     /// </summary>
@@ -312,6 +297,22 @@ public class AsyncLoader : MonoBehaviour
     //private void UnloadSelectedScenes()
 
     #endregion
+}
+
+/// <summary>
+/// Struct for containing the data about all useable scenes in the game.
+/// </summary>
+[System.Serializable]
+public struct DefinedSceneData
+{
+    /// <summary>
+    /// The name of the Scene as a string.
+    /// </summary>
+    public string m_sceneName;
+    /// <summary>
+    /// A toggle for labeling which scenes are persistant.
+    /// </summary>
+    public bool m_isPersistant;
 }
 
 

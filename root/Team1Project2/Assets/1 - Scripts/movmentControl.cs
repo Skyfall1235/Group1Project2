@@ -9,6 +9,9 @@ public class movmentControl : MonoBehaviour
     [SerializeField] private float runSpeed = 40f;
     float horizontalMove = 0f;
     [SerializeField] private bool jump = false;
+    [SerializeField] private bool isFacingRight;
+    [SerializeField] private Collider collider;
+
 
     private void Update()
     {
@@ -18,6 +21,14 @@ public class movmentControl : MonoBehaviour
             jump = true;
             Debug.Log(jump);
         }
+        if (horizontalMove >= 0f)
+        {
+            isFacingRight = true;
+            collider.transform.localPosition = new Vector3(-collider.transform.localPosition.x, collider.transform.localPosition.y, collider.transform.localPosition.z);
+        }
+        else isFacingRight = false;
+        collider.transform.localPosition = new Vector3(collider.transform.localPosition.x, collider.transform.localPosition.y, collider.transform.localPosition.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     private void FixedUpdate()
@@ -25,4 +36,7 @@ public class movmentControl : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
     }
+
+        
+
 }
