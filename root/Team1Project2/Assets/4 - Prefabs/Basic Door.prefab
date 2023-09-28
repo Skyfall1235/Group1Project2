@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6998147742827358277}
   - component: {fileID: 2098818488337776247}
   m_Layer: 6
-  m_Name: Cube (3)
+  m_Name: DoorWall
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!114 &637936392710204121
 MonoBehaviour:
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 418155151669083487}
   - component: {fileID: 382203968036919886}
   m_Layer: 6
-  m_Name: Cube (6)
+  m_Name: DoorObject
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,8 +307,7 @@ Transform:
   m_LocalPosition: {x: 3.4883895, y: -0.056833237, z: 0}
   m_LocalScale: {x: 0.13417345, y: 0.79623, z: 4.7152505}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 757092622258766466}
+  m_Children: []
   m_Father: {fileID: 6541716572117732618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6381800445337022329
@@ -422,7 +421,7 @@ GameObject:
   - component: {fileID: 4187769304200137320}
   - component: {fileID: 3532655313254272658}
   m_Layer: 6
-  m_Name: Cube (4)
+  m_Name: DoorWall
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -514,37 +513,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &3201153886404541418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 757092622258766466}
-  m_Layer: 6
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &757092622258766466
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3201153886404541418}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8567665221461606747}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3543578505161489575
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +526,7 @@ GameObject:
   - component: {fileID: 1589725980890996208}
   - component: {fileID: 214395712626483638}
   m_Layer: 6
-  m_Name: Cube (5)
+  m_Name: DoorWall
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -679,10 +647,10 @@ Transform:
   m_LocalScale: {x: 0.45751783, y: 3.6950216, z: 0.76466924}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3802714862323872593}
+  - {fileID: 3883925954674351102}
   - {fileID: 2195038514196539169}
   - {fileID: 8567665221461606747}
   - {fileID: 8834807117379272078}
-  - {fileID: 3883925954674351102}
-  - {fileID: 3802714862323872593}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
