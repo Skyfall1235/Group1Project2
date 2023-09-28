@@ -11,9 +11,6 @@ public class MainMenuUI : MonoBehaviour
 
     private void Awake()
     {
-        // Load the `loader` scene.
-        SceneManager.LoadScene("Persistant", LoadSceneMode.Additive);
-
         // Start a coroutine to wait until the scene has been loaded before finding the loader.
         StartCoroutine(FindLoader());
     }

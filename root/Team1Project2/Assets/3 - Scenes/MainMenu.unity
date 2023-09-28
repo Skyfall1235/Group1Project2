@@ -245,8 +245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loader: {fileID: 0}
   scenesForFirstLevel:
-  - m_sceneName: Persistant
-    m_isPersistant: 1
   - m_sceneName: Player
     m_isPersistant: 0
   - m_sceneName: levelOneContinued

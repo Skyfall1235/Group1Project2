@@ -161,6 +161,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TempText
       objectReference: {fileID: 0}
+    - target: {fileID: 8697412441286779475, guid: bbf294e5b3cb65e428f2877defd7c255,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.0064926
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697412441286779475, guid: bbf294e5b3cb65e428f2877defd7c255,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 2.2532463
+      objectReference: {fileID: 0}
     - target: {fileID: 9199422164764597567, guid: bbf294e5b3cb65e428f2877defd7c255,
         type: 3}
       propertyPath: m_LocalPosition.x
