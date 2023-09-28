@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealthManager : HealthManager, I_HealthManager
+public class PlayerHealthManager : HealthManager, IHealthManager
 {
     public override int TakeDamage(int damageAmount) 
     { 

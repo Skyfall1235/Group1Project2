@@ -5,7 +5,7 @@ using UnityEngine;
 public class KeyAndLock : MonoBehaviour
 {
     [SerializeField] private GameObject invisWall;
-    [SerializeField] private bool Key;
+    [SerializeField] private bool Key = false;
     [SerializeField] private KeyItem keyID;
     //if not key, then lock
     [SerializeField] private int lockID;
@@ -48,7 +48,26 @@ public class KeyAndLock : MonoBehaviour
         go.SetActive(false);
     }
 
+    //for what a key is
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag != "Player")
+        {
+            Debug.Log("not a player");
+            return;
+        }
+        //Debug.Log("object is hitting wall");
+        PlayerInteraction interaction = other.gameObject.GetComponent<PlayerInteraction>();
+        Debug.Log("finding interaction");
 
+        if (interaction != null && Key)
+        {
+            interaction.collectedKeyItems.Add(keyID);
+            gameObject.SetActive(false);
+        }
+    }
+
+    //FOR WHAT A LOCK IS
     private void OnCollisionEnter(Collision other)
     {
         //Debug.Log("colliding?");

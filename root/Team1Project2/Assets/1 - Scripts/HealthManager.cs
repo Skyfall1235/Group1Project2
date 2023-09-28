@@ -1,24 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class HealthManager : MonoBehaviour, I_HealthManager
+public class HealthManager : MonoBehaviour, IHealthManager
 {
     public int m_maxHealth = 100;
     public int m_currentHealth;
     public int m_armor = 0;
     public bool m_canTakeDamage = true;
     public float IFrameSeconds = 0f;
+    public TextMeshProUGUI TEMP_HP_text;
 
+    private void TEMPHPSHOW()
+    {
+        TEMP_HP_text.text = $"Temp text: HP value is {m_currentHealth}";
+    }
     protected virtual void Start()
     {
         m_currentHealth = m_maxHealth;
     }
 
+    protected virtual void Update()
+    {
+        TEMPHPSHOW();   
+    }
+
     public virtual int TakeDamage(int damageAmount)
     {
+        Debug.Log("reciving the call");
         if (!m_canTakeDamage)
         {
+            Debug.Log("not taking damage but reciving the call");
             return 0;
         }
         m_armor -= damageAmount;
