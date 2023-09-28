@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class KeyAndLock : MonoBehaviour
@@ -41,6 +42,18 @@ public class KeyAndLock : MonoBehaviour
     //    // Disable the text box so that it cannot be activated again.
     //    textBox.SetActive(false);
     //
+
+    private void Start()
+    {
+        GameObject[] inactiveTextBoxes = Resources.FindObjectsOfTypeAll<GameObject>().Where(gameObject => gameObject.tag == "TEMP" && !gameObject.activeInHierarchy).ToArray();
+
+        textBox = inactiveTextBoxes[0];
+        if (textBox == null)
+        {
+            Debug.LogWarning("temp was not found");
+        }
+        
+    }
 
     private IEnumerator WaitSecondsThenTurnOff(float seconds, GameObject go)
     {

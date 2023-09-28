@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,12 +8,22 @@ public class MainMenuUI : MonoBehaviour
     //[SerializeField] private GameObject loaderGO;
     [SerializeField] private DefinedSceneData[] scenesForFirstLevel;
 
+
     private void Awake()
     {
         // Load the `loader` scene.
         SceneManager.LoadScene("Persistant", LoadSceneMode.Additive);
 
-        // Find the object in the `loader` scene.
+        // Start a coroutine to wait until the scene has been loaded before finding the loader.
+        StartCoroutine(FindLoader());
+    }
+
+    private IEnumerator FindLoader()
+    {
+        // Wait until the scene has been loaded.
+        yield return SceneManager.LoadSceneAsync("Persistant", LoadSceneMode.Additive);
+
+        // Find the loader object in the `loader` scene.
         GameObject loaderObject = GameObject.Find("Async Loader");
 
         // If the object is found, do something with it.
@@ -25,7 +33,7 @@ public class MainMenuUI : MonoBehaviour
         }
         else
         {
-            //loader = loaderGO.GetComponent<AsyncLoader>();
+            Debug.LogWarning("Loader was not located, please retry");
         }
     }
     public void StartGame()
@@ -35,6 +43,7 @@ public class MainMenuUI : MonoBehaviour
         {
             sceneListToLoad[i] = scenesForFirstLevel[i].m_sceneName;
         }
+        Debug.Log("list of sceneListToLoad is of length " + sceneListToLoad.Length);
         loader.LoadSceneListWithFade(sceneListToLoad, "Player");
     }
     public void QuitGame()

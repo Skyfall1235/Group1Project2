@@ -178,15 +178,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 631333503552649188, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1613099977604069791, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
         type: 3}
       propertyPath: m_Name
       value: Async Loader
-      objectReference: {fileID: 0}
-    - target: {fileID: 1613099977604069791, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170955407105696549, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
         type: 3}
@@ -238,39 +238,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
+    - target: {fileID: 3294128210683141400, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
         type: 3}
-      propertyPath: m_sceneNames.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
-        type: 3}
-      propertyPath: m_sceneNames.Array.data[0].m_sceneName
-      value: Main Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
-        type: 3}
-      propertyPath: m_sceneNames.Array.data[1].m_sceneName
-      value: Persistant
-      objectReference: {fileID: 0}
-    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
-        type: 3}
-      propertyPath: m_sceneNames.Array.data[2].m_sceneName
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
-        type: 3}
-      propertyPath: m_sceneNames.Array.data[3].m_sceneName
-      value: Level One
-      objectReference: {fileID: 0}
-    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
-        type: 3}
-      propertyPath: m_sceneNames.Array.data[4].m_sceneName
-      value: Level Two
-      objectReference: {fileID: 0}
-    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
-        type: 3}
-      propertyPath: m_sceneNames.Array.data[1].m_isPersistant
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
