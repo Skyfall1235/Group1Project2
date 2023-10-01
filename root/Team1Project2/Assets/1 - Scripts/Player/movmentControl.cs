@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class movmentControl : MonoBehaviour
@@ -7,10 +6,10 @@ public class movmentControl : MonoBehaviour
     [SerializeField] private PlayerController controller;
 
     [SerializeField] private float runSpeed = 40f;
-    float horizontalMove = 0f;
-    [SerializeField] private bool jump = false;
-    [SerializeField] private bool isFacingRight;
-    [SerializeField] private Collider collider;
+    float horizontalMove = 0f; //the value that the script uses to determine movement direction
+    [SerializeField] private bool jump = false; //bool to send to the movement script when jumping
+    [SerializeField] private bool isFacingRight; // is used for the animation of the player
+    [SerializeField] private Collider m_interactionCollider;  //is the sepetate collider that triggers interactions from father away so the player doesnt have to ram into NPCs
 
 
     private void Update()
@@ -24,10 +23,10 @@ public class movmentControl : MonoBehaviour
         if (horizontalMove >= 0f)
         {
             isFacingRight = true;
-            collider.transform.localPosition = new Vector3(-collider.transform.localPosition.x, collider.transform.localPosition.y, collider.transform.localPosition.z);
+            m_interactionCollider.transform.localPosition = new Vector3(-m_interactionCollider.transform.localPosition.x, m_interactionCollider.transform.localPosition.y, m_interactionCollider.transform.localPosition.z);
         }
         else isFacingRight = false;
-        collider.transform.localPosition = new Vector3(collider.transform.localPosition.x, collider.transform.localPosition.y, collider.transform.localPosition.z);
+        m_interactionCollider.transform.localPosition = new Vector3(m_interactionCollider.transform.localPosition.x, m_interactionCollider.transform.localPosition.y, m_interactionCollider.transform.localPosition.z);
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 

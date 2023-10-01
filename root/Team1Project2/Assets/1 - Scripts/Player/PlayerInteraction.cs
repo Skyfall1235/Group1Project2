@@ -31,3 +31,11 @@ public struct KeyItem
     public string Name;
     public int ID;
 }
+
+[System.Serializable]
+public struct LockItem
+{
+    public int ID;
+    public bool unlocked;
+    public GameObject invisWall;
+}

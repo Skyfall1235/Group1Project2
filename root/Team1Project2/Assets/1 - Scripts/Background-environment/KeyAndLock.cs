@@ -5,12 +5,9 @@ using UnityEngine;
 
 public class KeyAndLock : MonoBehaviour
 {
-    [SerializeField] private GameObject invisWall;
     [SerializeField] private bool Key = false;
     [SerializeField] private KeyItem keyID;
-    //if not key, then lock
-    [SerializeField] private int lockID;
-    [SerializeField] private bool unlocked = false;
+    [SerializeField] private LockItem lockItem;
     [SerializeField] private GameObject textBox;
 
     //id associated with the key or lock it will be
@@ -104,10 +101,10 @@ public class KeyAndLock : MonoBehaviour
             foreach (KeyItem keyItem in interaction.collectedKeyItems)
             {
                 Debug.Log("checking each item in the colelcted keys");
-                if (keyItem.ID == lockID)
+                if (keyItem.ID == lockItem.ID)
                 {
-                    unlocked = true;
-                    invisWall.SetActive(false);
+                    lockItem.unlocked = true;
+                    lockItem.invisWall.SetActive(false);
                 }
                 else
                 {

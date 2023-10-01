@@ -1,9 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]

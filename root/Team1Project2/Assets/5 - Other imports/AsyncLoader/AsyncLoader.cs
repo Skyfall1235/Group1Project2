@@ -1,7 +1,7 @@
 /*
  * Author: Wyatt Murray
- * Version: 2
- * Date: 9/20/23
+ * Version: 2.1
+ * Date: 9/28/23
  * 
  * Description:
  * Manages asynchronous loading and unloading of scenes with fade transitions.
@@ -28,7 +28,6 @@ using UnityEngine.UI;
 public class AsyncLoader : MonoBehaviour
 {
     #region Member Variables
-    
     /// <summary>
     /// A list of scene names to be used during loading and unloading operations.
     /// </summary>
@@ -90,12 +89,12 @@ public class AsyncLoader : MonoBehaviour
     /// </summary>
     /// <param name="sceneList">Array of all scene names that wish to be loaded during the transition</param>
     /// <param name="activeScene">The scene that we wish to confirm to be active, and if it is not, to set it so</param>
-    public virtual void LoadSceneListWithFade(string[] sceneList, string activeScene)
+    public virtual void LoadSceneListWithFade(string[] sceneList, string activeScene, bool isCursorVisible)
     {
         if (!m_isFading)
         {
             StartCoroutine(FadeOutAndLoad(sceneList, activeScene));
-            Cursor.visible = false;
+            Cursor.visible = isCursorVisible;
         }
     }
 
@@ -136,6 +135,7 @@ public class AsyncLoader : MonoBehaviour
                 }
             }
         }
+
         // Load the new scene asynchronously
         foreach (string scene in sceneList)
         {

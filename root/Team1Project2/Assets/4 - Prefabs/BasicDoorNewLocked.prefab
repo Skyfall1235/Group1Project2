@@ -94,13 +94,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26733bfe71395e542b700276fb95b837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invisWall: {fileID: 4368452799006798916}
   Key: 0
   keyID:
     Name: 
     ID: 0
-  lockID: 0
-  unlocked: 0
+  lockItem:
+    ID: 0
+    unlocked: 0
+    invisWall: {fileID: 4368452799006798916}
   textBox: {fileID: 0}
 --- !u!1001 &1005412481103576571
 PrefabInstance:

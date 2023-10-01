@@ -72,7 +72,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9199422164764597567}
   - component: {fileID: 5997171492125972276}
-  - component: {fileID: 7614887841980602392}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -113,22 +112,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_maxHealth: 100
   m_currentHealth: 0
-  m_armor: 0
+  m_armor: 50
   m_canTakeDamage: 1
-  IFrameSeconds: 0
+  IFrameSeconds: 2
   TEMP_HP_text: {fileID: 7031132564706543709}
---- !u!114 &7614887841980602392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044642541648640077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae3d9d46fb60454d833e320a6a2de30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1355989833603793268
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +393,7 @@ MonoBehaviour:
   runSpeed: 40
   jump: 0
   isFacingRight: 1
-  collider: {fileID: 8697412441286779475}
+  m_interactionCollider: {fileID: 0}
 --- !u!114 &6851215382254704394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,7 +1426,7 @@ Transform:
   m_GameObject: {fileID: 7446685889910256554}
   serializedVersion: 2
   m_LocalRotation: {x: 0.043619405, y: -0, z: -0, w: 0.9990483}
-  m_LocalPosition: {x: 0.94, y: 0.87155783, z: -9.9619465}
+  m_LocalPosition: {x: 72.57, y: 2.5401616, z: -11.823603}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

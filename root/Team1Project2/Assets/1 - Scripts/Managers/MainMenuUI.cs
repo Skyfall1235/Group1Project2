@@ -41,7 +41,7 @@ public class MainMenuUI : MonoBehaviour
             sceneListToLoad[i] = scenesForFirstLevel[i].m_sceneName;
         }
         Debug.Log("list of sceneListToLoad is of length " + sceneListToLoad.Length);
-        loader.LoadSceneListWithFade(sceneListToLoad, "Player");
+        loader.LoadSceneListWithFade(sceneListToLoad, "Player", true);
     }
     public void QuitGame()
     {
