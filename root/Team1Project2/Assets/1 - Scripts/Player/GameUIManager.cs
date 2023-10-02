@@ -9,6 +9,7 @@ public class GameUIManager : MonoBehaviour
 
     [SerializeField] GameObject[] m_textPrompts;
     [SerializeField] private bool m_isShowingPopup = false;
+    [SerializeField] private PlayerCombatController m_combatController;
 
 
 
