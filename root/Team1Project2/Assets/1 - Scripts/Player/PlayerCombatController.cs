@@ -8,27 +8,51 @@ public class PlayerCombatController : MonoBehaviour
 
     //lerp from the start to the front
     //pl;ayer controller will handle the call and waits, this script only needs to run them
-
+    [SerializeField] private float stabSpeed = 5f;
     [SerializeField] GameObject m_attackPrefab;
-    [SerializeField] Transform[] m_attackColliders = new Transform[2];
-    [SerializeField] GameObject m_blockCollider;
+    public bool m_canAttack = false;
+    [SerializeField] private Vector3 initialLocalScale;
+    private bool e_isFacingRight
+    {
+        get { return gameObject.GetComponent<movmentControl>().isFacingRight; }
+    }
 
+    private void Start()
+    {
+        // Set the prefab's initial local scale.
+        initialLocalScale = m_attackPrefab.transform.localScale;
+    }
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            WeaponAttack();
+        }
+    }
 
+    
+
+    
     public void WeaponAttack()
     {
-        GameObject prefab = Instantiate(m_attackPrefab);
-        m_attackColliders = prefab.GetComponentsInChildren<Transform>();
-        //should only be 3 objects
-        if (m_attackColliders.Length <= 0) { Debug.LogWarning("attack colliders do not exist");  }
-        if (m_attackColliders.Length > 0 )
+        Debug.Log("Attacking");
+        if (e_isFacingRight)
         {
-            //1 should be the animated
-            GameObject animatedAttack = m_attackColliders[0].gameObject;
-            //2 should be the tip
-            GameObject tipAttack = m_attackColliders[1].gameObject;
-            //3 is the endpoint
-            GameObject attackEndAttack = m_attackColliders[2].gameObject;
-        }    
+            m_attackPrefab.transform.localScale = initialLocalScale;
+        }
+        // Otherwise, flip the prefab's local scale on the x-axis.
+        else
+        {
+            m_attackPrefab.transform.localScale = new Vector3(-initialLocalScale.x, initialLocalScale.y, initialLocalScale.z);
+        }
+
+        //should only be 3 objects
+        if (m_canAttack)
+        {
+            Debug.Log("coroutine called");
+            StartCoroutine(WeaponAttackCoroutine());
+        }
+
     }
 
     public void Block()
@@ -41,19 +65,21 @@ public class PlayerCombatController : MonoBehaviour
 
     }
 
-    private IEnumerator WeaponAttackCoRoutine(GameObject animated, GameObject tip, GameObject endPoint)
+    private IEnumerator WeaponAttackCoroutine()
     {
-
+        //pla the stab animation
+        Debug.Log("resetting");
+        return null;
     }
 
-    private IEnumerator BlockCoRoutine()
+    private IEnumerator BlockCoroutine()
     {
-
+        return null;
     }
 
-    private IEnumerator projectileCoRoutine()
+    private IEnumerator projectileCoroutine()
     {
-
+        return null;
     }
 
 }
