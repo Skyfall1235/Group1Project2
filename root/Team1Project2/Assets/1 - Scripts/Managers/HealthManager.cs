@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour, IHealthManager
 {
-    public int m_maxHealth = 100;
     public int m_currentHealth;
     public int m_armor = 0;
+    public int m_maxHealth = 100;
+    public int m_maxArmor = 100;
     public bool m_canTakeDamage = true;
     public float IFrameSeconds = 0f;
     public TextMeshProUGUI TEMP_HP_text;
@@ -18,11 +19,12 @@ public class HealthManager : MonoBehaviour, IHealthManager
     protected virtual void Start()
     {
         m_currentHealth = m_maxHealth;
+        m_armor = m_maxArmor;
     }
 
     protected virtual void Update()
     {
-        TEMPHPSHOW();   
+        //TEMPHPSHOW();   
     }
 
     public virtual int TakeDamage(int damageAmount)
@@ -64,6 +66,14 @@ public class HealthManager : MonoBehaviour, IHealthManager
         if (m_currentHealth > m_maxHealth)
         {
             m_currentHealth = m_maxHealth;
+        }
+    }
+    public virtual void AddArmor(int armorAmount)
+    {
+        m_armor += armorAmount;
+        if (m_armor > m_maxArmor)
+        {
+            m_armor = m_maxArmor;
         }
     }
 

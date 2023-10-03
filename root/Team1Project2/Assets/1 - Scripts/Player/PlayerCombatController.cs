@@ -101,9 +101,9 @@ public class PlayerCombatController : MonoBehaviour
         m_canAct = false;
         //pla the stab animation
         Debug.Log("resetting");
-        return null;
+        
         m_canAct = true;
-
+        return null;
     }
 
     private IEnumerator BlockCoroutine()
