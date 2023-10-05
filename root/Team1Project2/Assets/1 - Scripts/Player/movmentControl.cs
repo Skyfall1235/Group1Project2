@@ -8,7 +8,7 @@ public class movmentControl : MonoBehaviour
     [SerializeField] private float runSpeed = 40f;
     float horizontalMove = 0f; //the value that the script uses to determine movement direction
     [SerializeField] private bool jump = false; //bool to send to the movement script when jumping
-    [SerializeField] private bool m_hasWings = false;
+    public bool m_hasWings = false;
     [SerializeField] private float m_newJumpForce;
     public bool isFacingRight; // is used for the animation of the player
     [SerializeField] private Collider m_interactionCollider;  //is the sepetate collider that triggers interactions from father away so the player doesnt have to ram into NPCs
@@ -18,6 +18,10 @@ public class movmentControl : MonoBehaviour
 
     private void Update()
     {
+        if (m_hasWings)
+        {
+            controller.m_JumpForce = m_newJumpForce;
+        }
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         if (Input.GetKeyDown(KeyCode.W))
         {
