@@ -22,4 +22,9 @@ public class PlayerHealthManager : HealthManager, IHealthManager
         m_gameUIManager.UpdateStatusBars();
         base.Die();
     }
+    public override void AddArmor(int armorAmount)
+    {
+        base.AddArmor(armorAmount);
+        m_gameUIManager.UpdateStatusBars();
+    }
 }

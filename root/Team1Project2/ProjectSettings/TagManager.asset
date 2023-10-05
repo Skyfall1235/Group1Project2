@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - TEMP
   - PlayerObject
+  - AsyncLoader
   layers:
   - Default
   - TransparentFX
