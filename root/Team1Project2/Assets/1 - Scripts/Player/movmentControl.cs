@@ -26,7 +26,7 @@ public class movmentControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             jump = true;
-            Debug.Log(jump);
+            //Debug.Log(jump);
         }
         if (horizontalMove >= 0f)
         {

@@ -5,6 +5,15 @@ using UnityEngine;
 public class PlayerHealthManager : HealthManager, IHealthManager
 {
     [SerializeField] private GameUIManager m_gameUIManager;
+
+    protected override void Start()
+    {
+        base.Start();
+        if (m_gameUIManager != null )
+        {
+            m_gameUIManager = gameObject.GetComponent<GameUIManager>();
+        }
+    }
     public override int TakeDamage(int damageAmount) 
     { 
         base.TakeDamage(damageAmount);

@@ -9,6 +9,8 @@ public class KeyAndLock : MonoBehaviour
     [SerializeField] private KeyItem keyID;
     [SerializeField] private LockItem lockItem;
     [SerializeField] private GameObject textBox;
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clip;
 
     //id associated with the key or lock it will be
 
@@ -72,6 +74,10 @@ public class KeyAndLock : MonoBehaviour
 
         if (interaction != null && Key)
         {
+            if (source != null)
+            {
+                source.PlayOneShot(clip);
+            }
             interaction.collectedKeyItems.Add(keyID);
             gameObject.SetActive(false);
         }
@@ -103,6 +109,10 @@ public class KeyAndLock : MonoBehaviour
                 Debug.Log("checking each item in the colelcted keys");
                 if (keyItem.ID == lockItem.ID)
                 {
+                    if (source != null)
+                    {
+                        source.PlayOneShot(clip);
+                    }
                     lockItem.unlocked = true;
                     lockItem.invisWall.SetActive(false);
                 }
