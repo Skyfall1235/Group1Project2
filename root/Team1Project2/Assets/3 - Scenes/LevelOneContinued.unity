@@ -27375,7 +27375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b70c29f15a38b4e97f7949bfa80761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_startPosition: {fileID: 676096823}
   m_playerPrefab: {fileID: 0}
 --- !u!4 &676096825
 Transform:
@@ -27386,7 +27385,7 @@ Transform:
   m_GameObject: {fileID: 676096823}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -81.35, y: 2.1, z: 0}
+  m_LocalPosition: {x: -81.35, y: 2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
