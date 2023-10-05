@@ -12,6 +12,8 @@ public class movmentControl : MonoBehaviour
     [SerializeField] private float m_newJumpForce;
     public bool isFacingRight; // is used for the animation of the player
     [SerializeField] private Collider m_interactionCollider;  //is the sepetate collider that triggers interactions from father away so the player doesnt have to ram into NPCs
+    public bool directionalWalk = false;
+    public float offAxisWalkValue = 0f;
 
 
     private void Update()
@@ -29,7 +31,14 @@ public class movmentControl : MonoBehaviour
         }
         else isFacingRight = false;
         m_interactionCollider.transform.localPosition = new Vector3(m_interactionCollider.transform.localPosition.x, m_interactionCollider.transform.localPosition.y, m_interactionCollider.transform.localPosition.z);
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        
+        //if the local walk area is not 0, we modify it, except when we want to
+        if (!directionalWalk)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+            return;
+        }
+        transform.position = new Vector3(transform.position.x, transform.position.y, offAxisWalkValue);
     }
 
     private void FixedUpdate()
