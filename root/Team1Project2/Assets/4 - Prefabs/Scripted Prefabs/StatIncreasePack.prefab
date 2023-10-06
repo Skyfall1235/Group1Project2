@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4dee7670d768246b665f056d0e0669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stat: 1
-  increaseAmount: 25
+  stat: 0
+  increaseAmount: 0
   manager: {fileID: 0}
 --- !u!65 &1843403873267614698
 BoxCollider:

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9067820738295368941}
   m_Layer: 0
   m_Name: DamagingSludge Red
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 069dc2dba3b677d40bd8439e3252cffd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d3f3b0dd10777284ab4f3388364259f5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

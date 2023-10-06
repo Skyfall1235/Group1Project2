@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf7165af16e99a4ca1486aec4209575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneList: []
+  sceneList:
+  - Levelthree
+  - Player
   activeScene: 
   isCursorVisible: 0
   loader: {fileID: 0}
