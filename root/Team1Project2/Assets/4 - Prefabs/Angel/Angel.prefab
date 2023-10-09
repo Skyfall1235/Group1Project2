@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1014312810339334095}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.7043686, y: 1.2427382, z: -4.95994}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34108,7 +34108,8 @@ GameObject:
   - component: {fileID: 5512637587662370095}
   - component: {fileID: 330743675740728798}
   - component: {fileID: 4420814554450845793}
-  - component: {fileID: 3809014526001641985}
+  - component: {fileID: 4331801577350641057}
+  - component: {fileID: 346661237115311287}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -34125,7 +34126,7 @@ Transform:
   m_GameObject: {fileID: 1888298020063321042}
   serializedVersion: 2
   m_LocalRotation: {x: 0.35355338, y: -0.35355335, z: -0.61237246, w: 0.6123725}
-  m_LocalPosition: {x: 2.7243729, y: 1.2227378, z: -4.94794}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.17603871, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45831,28 +45832,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888298020063321042}
   m_Mesh: {fileID: 0}
---- !u!64 &3809014526001641985
-MeshCollider:
+--- !u!114 &4331801577350641057
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888298020063321042}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6979b9f5725894f8fb838c0ba3256e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentTransform: {fileID: 8750834452812567023}
+  rotationAxis: 0
+  rotationSpeed: 30
+--- !u!114 &346661237115311287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888298020063321042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6979b9f5725894f8fb838c0ba3256e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentTransform: {fileID: 0}
+  rotationAxis: 1
+  rotationSpeed: 20
 --- !u!1 &2193906802236683915
 GameObject:
   m_ObjectHideFlags: 0
@@ -45866,7 +45875,8 @@ GameObject:
   - component: {fileID: 9128200369236022093}
   - component: {fileID: 997938604943926973}
   - component: {fileID: 650734556771917593}
-  - component: {fileID: 5948495066995780939}
+  - component: {fileID: 3385068460748329795}
+  - component: {fileID: 5136399629386944602}
   m_Layer: 0
   m_Name: Cylinder (2)
   m_TagString: Untagged
@@ -45883,7 +45893,7 @@ Transform:
   m_GameObject: {fileID: 2193906802236683915}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6532814, y: -0.6532814, z: -0.27059832, w: 0.27059832}
-  m_LocalPosition: {x: 2.7243729, y: 1.2227378, z: -4.94794}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.221, y: 0.19485441, z: 1.221}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57589,28 +57599,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2193906802236683915}
   m_Mesh: {fileID: 0}
---- !u!64 &5948495066995780939
-MeshCollider:
+--- !u!114 &3385068460748329795
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2193906802236683915}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6979b9f5725894f8fb838c0ba3256e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentTransform: {fileID: 8750834452812567023}
+  rotationAxis: 2
+  rotationSpeed: 30
+--- !u!114 &5136399629386944602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193906802236683915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6979b9f5725894f8fb838c0ba3256e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentTransform: {fileID: 0}
+  rotationAxis: 1
+  rotationSpeed: 20
 --- !u!1 &2368550593806987206
 GameObject:
   m_ObjectHideFlags: 0
@@ -57624,7 +57642,7 @@ GameObject:
   - component: {fileID: 5447257242746814682}
   - component: {fileID: 8578097790389364194}
   - component: {fileID: 2045755405178041783}
-  - component: {fileID: 260055469558417978}
+  - component: {fileID: 5814656787918627584}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -57640,13 +57658,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2368550593806987206}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0.00000023841855}
-  m_LocalPosition: {x: 2.7243729, y: 1.2227378, z: -4.94794}
+  m_LocalRotation: {x: -0.1609287, y: -0, z: -0, w: 0.9869661}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4584844, y: 0.18661594, z: 1.4584844}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2971013968784973342}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: -18.522, y: 0, z: 0}
 --- !u!114 &2972605018602718109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69347,28 +69365,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2368550593806987206}
   m_Mesh: {fileID: 0}
---- !u!64 &260055469558417978
-MeshCollider:
+--- !u!114 &5814656787918627584
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2368550593806987206}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6979b9f5725894f8fb838c0ba3256e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentTransform: {fileID: 8750834452812567023}
+  rotationAxis: 1
+  rotationSpeed: 30
 --- !u!1 &7753447879389534573
 GameObject:
   m_ObjectHideFlags: 0
