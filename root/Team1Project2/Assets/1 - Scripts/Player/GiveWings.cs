@@ -11,7 +11,7 @@ public class GiveWings : MonoBehaviour
             return;
         }
         movmentControl control = other.gameObject.GetComponent<movmentControl>();
-        control.m_hasWings = true;
+        control.GiveWings();
         gameObject.SetActive(false);
     }
 }

@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 2200808686849606285}
   m_Layer: 0
   m_Name: interaction Collider
-  m_TagString: Player
+  m_TagString: PlayerObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,7 +204,6 @@ MonoBehaviour:
   m_maxArmor: 100
   m_canTakeDamage: 1
   IFrameSeconds: 0
-  TEMP_HP_text: {fileID: 0}
   m_gameUIManager: {fileID: 7025982300427172410}
 --- !u!114 &7025982300427172410
 MonoBehaviour:
@@ -231,7 +230,7 @@ MonoBehaviour:
   m_textPrompts:
   - {fileID: 6407180130704114062}
   m_isShowingPopup: 0
-  m_barLerpSpeed: 0.5
+  m_barLerpSpeed: 2
   m_combatController: {fileID: 7072020443762298189}
   m_healthManager: {fileID: 3529397247266934637}
   m_currentHealth: 0
@@ -458,7 +457,7 @@ GameObject:
   - component: {fileID: 6851215382254704394}
   - component: {fileID: 7072020443762298189}
   m_Layer: 0
-  m_Name: Player handling
+  m_Name: PlayerObject
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -629,6 +628,7 @@ MonoBehaviour:
   runSpeed: 40
   jump: 0
   m_hasWings: 0
+  m_WingIcon: {fileID: 6251795788524097737}
   m_newJumpForce: 650
   isFacingRight: 1
   m_interactionCollider: {fileID: 8697412441286779475}
@@ -1387,13 +1387,13 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2205,7 +2205,7 @@ GameObject:
   - component: {fileID: 6895353305461090162}
   - component: {fileID: 4264901559359465617}
   m_Layer: 0
-  m_Name: Heart
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2258,7 +2258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d6f6d183cbc0dd544938fb4cb4a9da81, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5ef322b1838931418bdfd0eb7e63bad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2516,6 +2516,7 @@ GameObject:
   - component: {fileID: 7182882720754405181}
   - component: {fileID: 9195094977605191971}
   - component: {fileID: 1032497914397847537}
+  - component: {fileID: 5543079057532552109}
   m_Layer: 0
   m_Name: levelNum
   m_TagString: Untagged
@@ -2639,6 +2640,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5543079057532552109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522335335604404984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296d9b9c2eadef241928505abcd9e379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldIndicator: {fileID: 1032497914397847537}
 --- !u!1 &6069121554855709249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,7 +2718,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: build 1.0.0.1
+  m_text: build 0.3.3.4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2865,7 +2879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5160412463036427391
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3102,7 +3116,7 @@ Transform:
   m_GameObject: {fileID: 7446685889910256554}
   serializedVersion: 2
   m_LocalRotation: {x: 0.043619405, y: -0, z: -0, w: 0.9990483}
-  m_LocalPosition: {x: 0, y: 2.5401616, z: -11.823603}
+  m_LocalPosition: {x: 0, y: 2.5401614, z: -11.823603}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3617,7 +3631,7 @@ Transform:
   m_GameObject: {fileID: 8855007869234893320}
   serializedVersion: 2
   m_LocalRotation: {x: 0.043619405, y: -0, z: -0, w: 0.9990483}
-  m_LocalPosition: {x: 0, y: 0.87155783, z: -9.9619465}
+  m_LocalPosition: {x: 0, y: 0.8715577, z: -9.9619465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -10,12 +10,6 @@ public class HealthManager : MonoBehaviour, IHealthManager
     public int m_maxArmor = 100;
     public bool m_canTakeDamage = true;
     public float IFrameSeconds = 0f;
-    public TextMeshProUGUI TEMP_HP_text;
-
-    private void TEMPHPSHOW()
-    {
-        TEMP_HP_text.text = $"Temp text: HP value is {m_currentHealth}";
-    }
     protected virtual void Start()
     {
         m_currentHealth = m_maxHealth;
