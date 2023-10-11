@@ -10,13 +10,14 @@ public class SustainedTalker : MonoBehaviour
     [SerializeField] private List<DisplayAndContent> m_speakers = new List<DisplayAndContent>();
     [SerializeField] private float timetoDisplayText = 5f;
     [SerializeField] private bool m_hasBeenTriggered = false;
+    [SerializeField] private bool m_StopPlayer = false;
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("triggered  sustained Talker NPC");
         if (!m_hasBeenTriggered && other.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(StartChat());
+            StartCoroutine(StartChat(other));
             m_hasBeenTriggered = true;
         }
     }
@@ -47,8 +48,12 @@ public class SustainedTalker : MonoBehaviour
 
 
     //method that once is triggers, start going through the dialogs 1 by one, for each text
-    private IEnumerator StartChat()
+    private IEnumerator StartChat(Collider other)
     {
+        if(m_StopPlayer)
+        {
+            other.gameObject.GetComponent<movmentControl>().canMove = false;
+        }
         
         //for each dialog in the list, 
         //turn on the gameobject idicated by the speaker, display the new text, wait a few seconds, and then turn off the panel
@@ -85,11 +90,8 @@ public class SustainedTalker : MonoBehaviour
             //little bit of delay for chats so they dont teleport
             yield return new WaitForSeconds(0.5f);
         }
+        other.gameObject.GetComponent<movmentControl>().canMove = true;
     }
-
-
-
-
 }
 
 [System.Serializable]

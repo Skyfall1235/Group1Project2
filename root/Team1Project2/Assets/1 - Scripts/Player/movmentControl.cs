@@ -15,10 +15,15 @@ public class movmentControl : MonoBehaviour
     [SerializeField] private Collider m_interactionCollider;  //is the sepetate collider that triggers interactions from father away so the player doesnt have to ram into NPCs
     public bool directionalWalk = false;
     public float offAxisWalkValue = 0f;
+    public bool canMove = true;
 
 
     private void Update()
     {
+        if (!canMove)
+        {
+            return;
+        }
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         if (Input.GetKeyDown(KeyCode.W))
         {
