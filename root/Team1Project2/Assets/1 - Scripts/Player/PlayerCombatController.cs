@@ -94,41 +94,33 @@ public class PlayerCombatController : MonoBehaviour
 
     private IEnumerator WeaponAttackCoroutine(bool facingRight)
     {
+        m_AttackData.collider.SetActive(true);
         m_canAct = false;
-        RectTransform imagePosition = m_AttackData.spearIcon.GetComponent<RectTransform>();
-        Collider collider = m_AttackData.collider.GetComponent<Collider>();
-
-        // Get the current position of the image and icon.
-        float iconTravel = m_AttackData.IGDistanceForIcon;
-        float colliderTravel = m_AttackData.IRLdistance;
+        Vector2 colliderStart = m_AttackData.collider.transform.localPosition;
 
         // Calculate the new position of the image and icon.
-        Vector2 newImagePosition = (e_isFacingRight ? Vector2.right * iconTravel : Vector2.left * iconTravel);
-        //Vector3 newColliderPosition = (e_isFacingRight ? Vector3.right * colliderTravel : Vector3.left * colliderTravel);
+        Vector3 newColliderPosition = (facingRight ? Vector3.right * m_AttackData.IRLdistance : Vector3.left * m_AttackData.IRLdistance);
 
-        Debug.Log($"IMG {newImagePosition} ");
-
-
+        Debug.Log($"IMG {newColliderPosition} ");
 
         // Move the image and icon to their new positions over time.
-        while (imagePosition.anchoredPosition != newImagePosition)
+        float t = 0f;
+        while (t < 1f)
         {
-            // Calculate the distance to move the image and icon.
-            Vector2 imageDistanceToMove = newImagePosition - imagePosition.anchoredPosition;
-            //Vector3 colliderDistanceToMove = newColliderPosition - collider.transform.position;
-
-            // Move the image and icon by the calculated distance.
-            imagePosition.anchoredPosition += imageDistanceToMove * m_AttackData.stabSpeed * Time.deltaTime;
-            //collider.transform.localPosition += colliderDistanceToMove * m_AttackData.stabSpeed * Time.deltaTime;
+            t += Time.deltaTime * m_AttackData.stabSpeed;
+            Vector3 colliderPosition = Vector3.Lerp(colliderStart, newColliderPosition, t);
+            m_AttackData.collider.transform.localPosition = colliderPosition;
 
             yield return null;
         }
+        yield return new WaitForSeconds(0.1f);
+        m_AttackData.collider.SetActive(false);
+        m_AttackData.collider.transform.localPosition = colliderStart;
 
-        //pla the stab animation
+        // Play the stab animation.
         Debug.Log("resetting");
-        
+
         m_canAct = true;
-        //return null;
     }
 
     private IEnumerator BlockCoroutine()
