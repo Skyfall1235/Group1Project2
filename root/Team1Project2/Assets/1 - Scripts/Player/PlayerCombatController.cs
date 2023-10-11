@@ -1,5 +1,7 @@
+using Codice.CM.Common;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCombatController : MonoBehaviour
 {
@@ -17,8 +19,10 @@ public class PlayerCombatController : MonoBehaviour
     private struct AttackData
     {
         public float stabSpeed;
-        public AnimationClip stabLeftClip;
-        public AnimationClip stabRightClip;
+        public GameObject collider;
+        public float IRLdistance;
+        public float IGDistanceForIcon;
+        public Image spearIcon;
     }
 
     [SerializeField]
@@ -65,17 +69,9 @@ public class PlayerCombatController : MonoBehaviour
     {
         //prevent block and attack stacking
         if (!m_canAttack || !m_canAct) { return; }
-
+            StartCoroutine(WeaponAttackCoroutine(e_isFacingRight));
             Debug.Log("Attacking");
-        if (e_isFacingRight)
-        {
-            //play the right facing animation
-        }
-        // Otherwise, flip the prefab's local scale on the x-axis.
-        else
-        {
-            //play the left facing animation
-        }
+        
     }
 
     public void Block()
@@ -99,11 +95,40 @@ public class PlayerCombatController : MonoBehaviour
     private IEnumerator WeaponAttackCoroutine(bool facingRight)
     {
         m_canAct = false;
+        RectTransform imagePosition = m_AttackData.spearIcon.GetComponent<RectTransform>();
+        Collider collider = m_AttackData.collider.GetComponent<Collider>();
+
+        // Get the current position of the image and icon.
+        float iconTravel = m_AttackData.IGDistanceForIcon;
+        float colliderTravel = m_AttackData.IRLdistance;
+
+        // Calculate the new position of the image and icon.
+        Vector2 newImagePosition = (e_isFacingRight ? Vector2.right * iconTravel : Vector2.left * iconTravel);
+        //Vector3 newColliderPosition = (e_isFacingRight ? Vector3.right * colliderTravel : Vector3.left * colliderTravel);
+
+        Debug.Log($"IMG {newImagePosition} ");
+
+
+
+        // Move the image and icon to their new positions over time.
+        while (imagePosition.anchoredPosition != newImagePosition)
+        {
+            // Calculate the distance to move the image and icon.
+            Vector2 imageDistanceToMove = newImagePosition - imagePosition.anchoredPosition;
+            //Vector3 colliderDistanceToMove = newColliderPosition - collider.transform.position;
+
+            // Move the image and icon by the calculated distance.
+            imagePosition.anchoredPosition += imageDistanceToMove * m_AttackData.stabSpeed * Time.deltaTime;
+            //collider.transform.localPosition += colliderDistanceToMove * m_AttackData.stabSpeed * Time.deltaTime;
+
+            yield return null;
+        }
+
         //pla the stab animation
         Debug.Log("resetting");
         
         m_canAct = true;
-        return null;
+        //return null;
     }
 
     private IEnumerator BlockCoroutine()
@@ -122,9 +147,4 @@ public class PlayerCombatController : MonoBehaviour
         return null;
     }
 
-
-    private static readonly int Idle = Animator.StringToHash("Idle");
-    private static readonly int LeftStab = Animator.StringToHash("LeftStab");
-    private static readonly int RightStab = Animator.StringToHash("RightStab");
-    private static readonly int FireProjectile = Animator.StringToHash("FireProjectile");
 }
