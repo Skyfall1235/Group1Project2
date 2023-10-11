@@ -8,6 +8,8 @@ TagManager:
   - TEMP
   - PlayerObject
   - AsyncLoader
+  - Enemy
+  - Shield
   layers:
   - Default
   - TransparentFX
