@@ -10,6 +10,7 @@ public class HealthManager : MonoBehaviour, IHealthManager
     public int m_maxArmor = 100;
     public bool m_canTakeDamage = true;
     public float IFrameSeconds = 0f;
+    public GameObject m_topParent = null;
     protected virtual void Start()
     {
         m_currentHealth = m_maxHealth;
@@ -73,7 +74,7 @@ public class HealthManager : MonoBehaviour, IHealthManager
 
     protected virtual void Die()
     {
-        Destroy(gameObject);
+        Destroy(m_topParent);
     }
 }
 

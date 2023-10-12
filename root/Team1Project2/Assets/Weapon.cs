@@ -14,29 +14,69 @@ public class Weapon : MonoBehaviour
     public bool knockback;
     public float knockbackForce;
     public movmentControl moveControl;
+    public EnemyAttackStatic attackStatic;
 
 
     private void OnTriggerEnter(Collider other)
     {
         HealthManager targetManager;
         if (!other.gameObject.CompareTag(targetTag)) { return; }
+        Debug.Log("hitting the target tag");
+        Debug.Log((other.gameObject.GetComponent<HealthManager>() != null));
 
-        if (other.gameObject.GetComponent<HealthManager>() != null)
+        //check and see if the parent has the Hp manager
+        if (other.gameObject.transform.parent.GetComponent<HealthManager>() != null)
         {
-            targetManager = other.gameObject.GetComponent<HealthManager>();
+            Debug.Log("getting the health manager");
+            targetManager = other.gameObject.transform.parent.GetComponent<HealthManager>();
             targetManager.TakeDamage(damage);
+            Debug.Log("giving damage");
             if (knockback)
             {
                 if (other.GetComponent<Rigidbody>() != null)
                 {
+                    bool isFacingRight = true;
                     Rigidbody rb = other.GetComponent<Rigidbody>();
-                    bool isFacingRight = moveControl.isFacingRight;
+                    if (moveControl != null)
+                    {
+                        isFacingRight = moveControl.isFacingRight;
+                    }
+                    if (attackStatic != null)
+                    {
+                        isFacingRight = attackStatic.isFacingRight;
+
+                    }
                     Vector3 knockBackDirection = (isFacingRight ? Vector3.right : Vector3.left);
                     rb.AddForce(knockBackDirection * knockbackForce, ForceMode.Impulse);
                 }
             }
         }
+        //if the parent doesnt, check the object itself
+        else if (other.gameObject.GetComponent<HealthManager>() != null)
+        {
+            Debug.Log("getting the health manager");
+            targetManager = other.gameObject.GetComponent<HealthManager>();
+            targetManager.TakeDamage(damage);
+            Debug.Log("giving damage");
+            if (knockback)
+            {
+                if (other.GetComponent<Rigidbody>() != null)
+                {
+                    bool isFacingRight = true;
+                    Rigidbody rb = other.GetComponent<Rigidbody>();
+                    if (moveControl != null)
+                    {
+                        isFacingRight = moveControl.isFacingRight;
+                    }
+                    if (attackStatic != null)
+                    {
+                        isFacingRight = attackStatic.isFacingRight;
 
-
+                    }
+                    Vector3 knockBackDirection = (isFacingRight ? Vector3.right : Vector3.left);
+                    rb.AddForce(knockBackDirection * knockbackForce, ForceMode.Impulse);
+                }
+            }
+        }
     }
 }

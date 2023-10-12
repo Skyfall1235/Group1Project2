@@ -29,7 +29,7 @@ public class PlayerHealthManager : HealthManager, IHealthManager
     protected override void Die() 
     {
         m_gameUIManager.UpdateStatusBars();
-        base.Die();
+        
     }
     public override void AddArmor(int armorAmount)
     {

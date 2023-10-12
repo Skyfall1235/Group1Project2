@@ -203,7 +203,8 @@ MonoBehaviour:
   m_maxHealth: 100
   m_maxArmor: 100
   m_canTakeDamage: 1
-  IFrameSeconds: 0
+  IFrameSeconds: 0.5
+  m_topParent: {fileID: 1044642541648640077}
   m_gameUIManager: {fileID: 7025982300427172410}
 --- !u!114 &7025982300427172410
 MonoBehaviour:
@@ -664,7 +665,7 @@ MonoBehaviour:
   m_canBlock: 1
   m_canAct: 1
   m_AttackData:
-    stabSpeed: 1
+    stabSpeed: 5
     collider: {fileID: 8577974443701219029}
     IRLdistance: 3.01
     IGDistanceForIcon: 30
@@ -3421,6 +3422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8401370754090491793}
   - component: {fileID: 1224283403814688136}
+  - component: {fileID: 7115332898600426057}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
@@ -3459,12 +3461,30 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7115332898600426057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8577974443701219029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0afdbdc31171104f82f989296ab02b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Enemy
+  damage: 50
+  knockback: 0
+  knockbackForce: 0
+  moveControl: {fileID: 0}
+  attackStatic: {fileID: 0}
 --- !u!1 &8855007869234893320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3581,7 +3601,7 @@ Transform:
   m_GameObject: {fileID: 9192240816801761863}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.425, y: -0.044, z: 0}
+  m_LocalPosition: {x: 1.425, y: 0.24, z: 0}
   m_LocalScale: {x: 0.38652, y: 2.2666519, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

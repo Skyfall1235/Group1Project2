@@ -52,6 +52,7 @@ MonoBehaviour:
   m_maxArmor: 0
   m_canTakeDamage: 1
   IFrameSeconds: 0.5
+  m_topParent: {fileID: 1005333050923583713}
   crystalInfo:
     crystal:
     - {fileID: 8687901302754684510}

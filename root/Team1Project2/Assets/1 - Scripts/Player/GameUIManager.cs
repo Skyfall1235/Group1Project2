@@ -20,6 +20,9 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] private PlayerHealthManager m_healthManager;
     [SerializeField] private int m_currentHealth;
 
+    [SerializeField] private GameObject deathPanel;
+    [SerializeField] private GameObject pausePanel;
+
     private void Start()
     {
         m_combatController = GetComponent<PlayerCombatController>();
@@ -41,6 +44,16 @@ public class GameUIManager : MonoBehaviour
     public void UpdateStatusBars()
     {
         StartCoroutine(MoveFillBars(m_StatusBar));
+    }
+
+    public void DisplayDeathPanel(bool display)
+    {
+
+    }
+
+    public void DisplayPausePanel(bool display)
+    {
+
     }
 
     private IEnumerator MoveFillBars(Slider[] slider)
