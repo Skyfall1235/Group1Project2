@@ -27,6 +27,7 @@ public class BossHealthManager : EnemyHealthmanager
     {
         m_canTakeDamage = false;
         crystalInfo.m_maxBreaks = 3;
+        base.Start();
     }
 
     protected override void Update()
@@ -50,6 +51,7 @@ public class BossHealthManager : EnemyHealthmanager
         foreach (var crystal in crystalInfo.crystal)
         {
             crystal.SetActive(true);
+            crystal.GetComponent<CrystalMessenger>().ResetHP();
         }
     }
 

@@ -176,6 +176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackStatic: {fileID: 5702462356457125879}
+  rangedAttack: {fileID: 0}
+  opponentTag: Player
 --- !u!1 &7230224547333257934
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,11 +329,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
+  useTarget: 1
   damage: 30
-  knockback: 0
-  knockbackForce: 0
+  destroyAfterTime: 0
+  TimeTilDestroy: 5
+  knockback: 1
+  knockbackForce: 30
   moveControl: {fileID: 0}
   attackStatic: {fileID: 5702462356457125879}
+  isFacingRight: 1
 --- !u!1 &8248014326532837135
 GameObject:
   m_ObjectHideFlags: 0

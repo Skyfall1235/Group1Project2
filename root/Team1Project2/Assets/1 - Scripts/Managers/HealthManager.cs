@@ -48,6 +48,12 @@ public class HealthManager : MonoBehaviour, IHealthManager
         return damageAmount;
     }
 
+    public virtual void ResetHP()
+    {
+        m_currentHealth = m_maxHealth;
+        m_armor = m_maxArmor;
+    }
+
     protected virtual IEnumerator Invincible()
     {
         m_canTakeDamage = false;
