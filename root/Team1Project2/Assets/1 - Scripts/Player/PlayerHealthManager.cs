@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PlayerHealthManager : HealthManager, IHealthManager
@@ -29,6 +28,7 @@ public class PlayerHealthManager : HealthManager, IHealthManager
     protected override void Die() 
     {
         m_gameUIManager.UpdateStatusBars();
+        m_gameUIManager.DisplayDeathPanel();
         
     }
     public override void AddArmor(int armorAmount)

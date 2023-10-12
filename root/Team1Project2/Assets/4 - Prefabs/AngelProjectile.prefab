@@ -121,7 +121,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Player
   useTarget: 1
-  damage: 15
+  damage: 5
+  destroyAfterTime: 1
+  TimeTilDestroy: 5
   knockback: 1
   knockbackForce: 10
   moveControl: {fileID: 0}

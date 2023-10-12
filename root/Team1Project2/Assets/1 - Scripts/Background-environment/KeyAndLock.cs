@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using System.Linq;
 using UnityEngine;
 
@@ -89,15 +89,15 @@ public class KeyAndLock : MonoBehaviour
         //Debug.Log("colliding?");
         if (other.gameObject.tag != "Player")
         {
-            Debug.Log("not a player");
+            //Debug.Log("not a player");
             return;
         }
         //Debug.Log("object is hitting wall");
         PlayerInteraction interaction = other.gameObject.GetComponent<PlayerInteraction>();
-        Debug.Log("finding interaction");
+        //Debug.Log("finding interaction");
         if (interaction != null)
         {
-            Debug.Log("searching for key");
+            //Debug.Log("searching for key");
             if (interaction.collectedKeyItems.Count <= 0) 
             {
                 textBox.SetActive(true);
@@ -106,7 +106,7 @@ public class KeyAndLock : MonoBehaviour
             }
             foreach (KeyItem keyItem in interaction.collectedKeyItems)
             {
-                Debug.Log("checking each item in the colelcted keys");
+                //Debug.Log("checking each item in the colelcted keys");
                 if (keyItem.ID == lockItem.ID)
                 {
                     if (source != null)

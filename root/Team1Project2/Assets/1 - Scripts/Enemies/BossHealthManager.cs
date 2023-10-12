@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
+
 using UnityEngine;
-using static BossHealthManager;
+
 
 public class BossHealthManager : EnemyHealthmanager
 {
@@ -20,6 +19,7 @@ public class BossHealthManager : EnemyHealthmanager
 
     [SerializeField] private CrystalInfo crystalInfo;
     [SerializeField] private float m_timeToAttack;
+    [SerializeField] private GameObject soul;
 
 
 
@@ -69,6 +69,12 @@ public class BossHealthManager : EnemyHealthmanager
         crystalInfo.crystalsLeft--;
         //start a coroutine to show the boss took some hits
         //if the boss has crystyals, keep the allowdamage tag off, else, start a corotuine that allows the player to attack them for a given amount of time
+    }
+
+    protected override void Die()
+    {
+        soul.SetActive(true);
+        base.Die();
     }
 
 

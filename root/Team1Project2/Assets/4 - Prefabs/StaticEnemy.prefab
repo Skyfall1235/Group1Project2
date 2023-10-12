@@ -330,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Player
   useTarget: 1
-  damage: 30
+  damage: 20
   destroyAfterTime: 0
   TimeTilDestroy: 5
   knockback: 1

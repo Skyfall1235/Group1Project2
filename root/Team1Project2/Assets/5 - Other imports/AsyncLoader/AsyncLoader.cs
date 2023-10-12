@@ -38,6 +38,7 @@ public class AsyncLoader : MonoBehaviour
     public List<DefinedSceneData> SceneNames
     {
         get { return m_sceneNames; }
+        set { m_sceneNames = value; }
     }
 
     /// <summary>

@@ -11,6 +11,7 @@ public class SustainedTalker : MonoBehaviour
     [SerializeField] private float timetoDisplayText = 5f;
     [SerializeField] private bool m_hasBeenTriggered = false;
     [SerializeField] private bool m_StopPlayer = false;
+    [SerializeField] private GameObject m_image;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -78,6 +79,11 @@ public class SustainedTalker : MonoBehaviour
 
             // Set the text content of the speaker's text mesh.
             displayAndContent.TextContent.text = dialog.content;
+            if(m_image != null)
+            {
+                m_image.SetActive(dialog.showImage);
+            }
+            
 
             // Turn on the speaker's game object.
             displayAndContent.TextDisplay.SetActive(true);
@@ -87,6 +93,11 @@ public class SustainedTalker : MonoBehaviour
 
             // Turn off the speaker's game object.
             displayAndContent.TextDisplay.SetActive(false);
+            if (m_image != null)
+            {
+                m_image.SetActive(false);
+            }
+            
             //little bit of delay for chats so they dont teleport
             yield return new WaitForSeconds(0.5f);
         }
@@ -99,6 +110,7 @@ public struct Dialog
 {
     public Talker speaker;
     public string content;
+    public bool showImage;
 }
 
 [System.Serializable]

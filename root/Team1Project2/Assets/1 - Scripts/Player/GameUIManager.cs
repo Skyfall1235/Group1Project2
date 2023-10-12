@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameUIManager : MonoBehaviour
@@ -21,6 +22,7 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] private int m_currentHealth;
 
     [SerializeField] private GameObject deathPanel;
+    [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject pausePanel;
 
     private void Start()
@@ -37,7 +39,10 @@ public class GameUIManager : MonoBehaviour
     }
     private void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            DisplayPausePanel(true);
+        }
     }
 
 
@@ -46,14 +51,50 @@ public class GameUIManager : MonoBehaviour
         StartCoroutine(MoveFillBars(m_StatusBar));
     }
 
-    public void DisplayDeathPanel(bool display)
+    public void DisplayDeathPanel()
     {
+        deathPanel.SetActive(true);
+        TurnOnCursor();
+    }
+
+    public void DisplayWinPanel()
+    {
+        winPanel.SetActive(true);
+        TurnOnCursor();
 
     }
 
     public void DisplayPausePanel(bool display)
     {
+        pausePanel.SetActive(display);
+        TurnOnCursor();
+    }
 
+    public void TurnOnCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void TurnOffCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void ReturnToMenu()
+    {
+        AsyncLoader loader = FindAnyObjectByType<AsyncLoader>();
+        Debug.Log("trying to return to menu");
+
+        if (loader != null)
+        {
+            string[] emptylist = new string[] { "MainMenu" };
+            
+            loader.LoadSceneListWithFade(emptylist, "MainMenu", true);
+            SceneManager.UnloadSceneAsync("Player");
+
+        }
     }
 
     private IEnumerator MoveFillBars(Slider[] slider)

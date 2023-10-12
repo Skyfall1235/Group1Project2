@@ -17,11 +17,14 @@ public class MainMenuUI : MonoBehaviour
 
     private IEnumerator FindLoader()
     {
-        // Wait until the scene has been loaded.
-        yield return SceneManager.LoadSceneAsync("Persistant", LoadSceneMode.Additive);
 
-        // Find the loader object in the `loader` scene.
         GameObject loaderObject = GameObject.Find("Async Loader");
+        if (loaderObject == null)
+        {
+            // Wait until the scene has been loaded.
+            yield return SceneManager.LoadSceneAsync("Persistant", LoadSceneMode.Additive);
+            loaderObject = GameObject.Find("Async Loader");
+        }
 
         // If the object is found, do something with it.
         if (loaderObject != null)
@@ -41,7 +44,7 @@ public class MainMenuUI : MonoBehaviour
             sceneListToLoad[i] = scenesForFirstLevel[i].m_sceneName;
         }
         Debug.Log("list of sceneListToLoad is of length " + sceneListToLoad.Length);
-        loader.LoadSceneListWithFade(sceneListToLoad, "Player", true);
+        loader.LoadSceneListWithFade(sceneListToLoad, "LevelOne", true);
     }
     public void QuitGame()
     {

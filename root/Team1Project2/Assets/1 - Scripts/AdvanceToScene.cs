@@ -15,6 +15,8 @@ public class AdvanceToScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+       
        loader.LoadSceneListWithFade(sceneList, activeScene, false);
+        other.gameObject.GetComponent<movmentControl>().canMove = true;
     }
 }

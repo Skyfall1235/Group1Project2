@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6165663963003431534
 RectTransform:
   m_ObjectHideFlags: 0
@@ -154,9 +154,15 @@ MonoBehaviour:
     m_isPersistant: 1
   - m_sceneName: Player
     m_isPersistant: 0
-  - m_sceneName: Level One
+  - m_sceneName: LevelOne
     m_isPersistant: 0
-  - m_sceneName: Level Two
+  - m_sceneName: LevelTwo
+    m_isPersistant: 0
+  - m_sceneName: LevelOneContinued
+    m_isPersistant: 0
+  - m_sceneName: LevelTwoContinued
+    m_isPersistant: 0
+  - m_sceneName: LevelThree
     m_isPersistant: 0
   m_fadeImage: {fileID: 3587366895680090534}
   m_canvas: {fileID: 631333503552649188}
