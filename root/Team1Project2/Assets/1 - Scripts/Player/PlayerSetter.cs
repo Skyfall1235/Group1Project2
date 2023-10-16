@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerSetter : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerSetter : MonoBehaviour
         {
             m_playerPrefab = playerController.gameObject;
             m_playerPrefab.transform.position = transform.position;
+            //GivePlayerActions("levelTwo");
         }
         
         
@@ -56,5 +58,19 @@ public class PlayerSetter : MonoBehaviour
             }
         }
         return playerSceneIndex;
+    }
+
+    private void GivePlayerActions(string sceneName)
+    {
+        //if the level 1 is open, the player shouldnot be able to use block or attack.
+        //if it is not the first level, then the player should be able to attack.
+        if(SceneManager.GetSceneByName(sceneName).isLoaded)
+        {
+            m_playerPrefab.GetComponent<PlayerCombatController>().m_canAct = false;
+        }
+        else
+        {
+            m_playerPrefab.GetComponent<PlayerCombatController>().m_canAct = true;
+        }
     }
 }

@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loader: {fileID: 0}
   scenesForFirstLevel:
-  - m_sceneName: LevelOne
+  - m_sceneName: CutScene01
     m_isPersistant: 0
 --- !u!1 &135141333
 GameObject:

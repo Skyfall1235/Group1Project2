@@ -15,16 +15,13 @@ EditorBuildSettings:
     path: Assets/3 - Scenes/Player.unity
     guid: 63600abd9f5e70241a804f04b8c2cc68
   - enabled: 1
-    path: Assets/3 - Scenes/LevelOne.unity
+    path: Assets/3 - Scenes/CutScene01.unity
     guid: 9e76e015eddb69848a148f44f9c1cb39
   - enabled: 1
-    path: Assets/3 - Scenes/LevelOneContinued.unity
+    path: Assets/3 - Scenes/LevelOne.unity
     guid: 98de9a1fe2b56324ca5832432b9265f3
   - enabled: 1
     path: Assets/3 - Scenes/LevelTwo.unity
-    guid: 28cf7a127741a9c4e8ee20cf204d2920
-  - enabled: 1
-    path: Assets/3 - Scenes/LevelTwoContinued.unity
     guid: 170f2ffef2337164d87a2599b41931d5
   - enabled: 1
     path: Assets/3 - Scenes/CutScene02.unity

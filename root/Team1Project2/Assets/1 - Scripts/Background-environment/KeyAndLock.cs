@@ -44,6 +44,13 @@ public class KeyAndLock : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(WaitTilLoad());
+        
+    }
+
+    private IEnumerator WaitTilLoad()
+    {
+        yield return new WaitForSeconds(1.5f);
         GameObject[] inactiveTextBoxes = Resources.FindObjectsOfTypeAll<GameObject>().Where(gameObject => gameObject.tag == "TEMP" && !gameObject.activeInHierarchy).ToArray();
 
         textBox = inactiveTextBoxes[0];
@@ -51,7 +58,6 @@ public class KeyAndLock : MonoBehaviour
         {
             Debug.LogWarning("temp was not found");
         }
-        
     }
 
     private IEnumerator WaitSecondsThenTurnOff(float seconds, GameObject go)
@@ -94,6 +100,11 @@ public class KeyAndLock : MonoBehaviour
         }
         //Debug.Log("object is hitting wall");
         PlayerInteraction interaction = other.gameObject.GetComponent<PlayerInteraction>();
+        //Transform parent = transform.parent;
+        //Transform ssUI = parent.transform.GetChild(0);
+        //Transform gamePanel = ssUI.transform.GetChild(0);
+        //GameObject doorResponse = gamePanel.transform.GetChild(0).gameObject;
+        
         //Debug.Log("finding interaction");
         if (interaction != null)
         {
