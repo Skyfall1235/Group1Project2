@@ -54,6 +54,7 @@ public class SustainedTalker : MonoBehaviour
         if(m_StopPlayer)
         {
             other.gameObject.GetComponent<movmentControl>().canMove = false;
+            //other.gameObject.GetComponent<>
         }
         
         //for each dialog in the list, 
