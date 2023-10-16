@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6062198178755781193}
   - component: {fileID: 966995086649381871}
   - component: {fileID: 4888539242794641382}
-  - component: {fileID: 6052073233714988861}
   m_Layer: 6
   m_Name: Porch (1)
   m_TagString: Ground
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2374544346124102535}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 93.21, y: 3.83, z: -6.0219445}
   m_LocalScale: {x: 0.8405232, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -329,26 +328,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2374544346124102535}
-  m_Mesh: {fileID: 0}
---- !u!64 &6052073233714988861
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2374544346124102535}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
