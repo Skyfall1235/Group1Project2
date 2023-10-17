@@ -2934,6 +2934,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soul
       objectReference: {fileID: 0}
+    - target: {fileID: 4221117475260297160, guid: 4e00a0f29a3925246aea254ce9613a3d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5413287608950498754, guid: 4e00a0f29a3925246aea254ce9613a3d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3261,11 +3266,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StaticEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 2038015837208951110, guid: 004622bb206cadd47905e1bfa7c9a281,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3497,25 +3497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1044642541648640077, guid: bbf294e5b3cb65e428f2877defd7c255,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2213811289470717999, guid: bbf294e5b3cb65e428f2877defd7c255,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3038572595566148709, guid: bbf294e5b3cb65e428f2877defd7c255,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.5401614
-      objectReference: {fileID: 0}
-    - target: {fileID: 3296246939339366939, guid: bbf294e5b3cb65e428f2877defd7c255,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3300522243681361805, guid: bbf294e5b3cb65e428f2877defd7c255,
         type: 3}
@@ -3562,15 +3547,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7115332898600426057, guid: bbf294e5b3cb65e428f2877defd7c255,
+    - target: {fileID: 8699266125783371807, guid: bbf294e5b3cb65e428f2877defd7c255,
         type: 3}
-      propertyPath: targetTag
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115332898600426057, guid: bbf294e5b3cb65e428f2877defd7c255,
-        type: 3}
-      propertyPath: useTarget
-      value: 0
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9199422164764597567, guid: bbf294e5b3cb65e428f2877defd7c255,
         type: 3}
@@ -3713,6 +3693,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundBoxTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 8499374170319794525, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3831,6 +3816,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StatIncreasePack
       objectReference: {fileID: 0}
+    - target: {fileID: 8785916224035880658, guid: 64bcc4355eb865b439098da2c5f363ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3853,6 +3843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boss/God
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005333050923583713, guid: b5b7514f2e95011429432c321a8067c0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1005333050923583713, guid: b5b7514f2e95011429432c321a8067c0,
         type: 3}
