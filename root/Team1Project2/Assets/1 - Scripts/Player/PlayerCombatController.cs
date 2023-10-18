@@ -54,7 +54,7 @@ public class PlayerCombatController : MonoBehaviour
         {
             WeaponAttack();
         }
-        if(Input.GetKeyUp(KeyCode.C) && m_canAct)
+        if(Input.GetKeyUp(KeyCode.LeftControl) && m_canAct)
         {
             Block();
         }

@@ -19,6 +19,7 @@ public class BossHealthManager : EnemyHealthmanager
 
     [SerializeField] private CrystalInfo crystalInfo;
     [SerializeField] private float m_timeToAttack;
+    [SerializeField] private GameObject m_shield;
     [SerializeField] private GameObject soul;
 
 
@@ -48,6 +49,7 @@ public class BossHealthManager : EnemyHealthmanager
     private void PlaceCrystals()
     {
         m_canTakeDamage = false;
+        m_shield.SetActive(true);
         foreach (var crystal in crystalInfo.crystal)
         {
             crystal.SetActive(true);
@@ -59,6 +61,7 @@ public class BossHealthManager : EnemyHealthmanager
     {
         crystalInfo.m_maxBreaks--;
         m_canTakeDamage = true;
+        m_shield.SetActive(false);
         yield return new WaitForSeconds(m_timeToAttack);
         PlaceCrystals();
         crystalInfo.crystalsLeft = 3;
@@ -73,7 +76,10 @@ public class BossHealthManager : EnemyHealthmanager
 
     protected override void Die()
     {
-        soul.SetActive(true);
+        if(soul != null)
+        {
+            soul.SetActive(true);
+        }
         base.Die();
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthManager : MonoBehaviour, IHealthManager
 {
@@ -11,6 +12,8 @@ public class HealthManager : MonoBehaviour, IHealthManager
     public bool m_canTakeDamage = true;
     public float IFrameSeconds = 0f;
     public GameObject m_topParent = null;
+
+    [SerializeField] private UnityEvent onHit = new UnityEvent();
     protected virtual void Start()
     {
         m_currentHealth = m_maxHealth;
@@ -30,6 +33,7 @@ public class HealthManager : MonoBehaviour, IHealthManager
             Debug.Log("not taking damage but reciving the call");
             return 0;
         }
+        onHit.Invoke();
         m_armor -= damageAmount;
         //if the armor is maller than 0 its a negative, right?
         //so if i add that to a positive, it becomes the extram damage onto the HP

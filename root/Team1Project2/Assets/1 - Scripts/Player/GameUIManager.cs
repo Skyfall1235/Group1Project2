@@ -12,8 +12,6 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] GameObject[] m_sliderGameObjects;
     Slider[] m_StatusBar;//1 and 2 is the armor, 3 & 4 is health
     [SerializeField] GameObject[] m_textPrompts;
-
-    [SerializeField] private bool m_isShowingPopup = false;
     [SerializeField] private float m_barLerpSpeed = 0.5f;
 
     [SerializeField] private PlayerCombatController m_combatController;
