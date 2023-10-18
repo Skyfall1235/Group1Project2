@@ -668,7 +668,6 @@ MonoBehaviour:
   - {fileID: 3864446667770301031}
   m_textPrompts:
   - {fileID: 6407180130704114062}
-  m_isShowingPopup: 0
   m_barLerpSpeed: 2
   m_combatController: {fileID: 7072020443762298189}
   m_healthManager: {fileID: 3529397247266934637}
@@ -1796,7 +1795,7 @@ GameObject:
   - component: {fileID: 9028159291810808591}
   m_Layer: 8
   m_Name: PlayerCanvas
-  m_TagString: Untagged
+  m_TagString: PlayerObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1974,7 +1973,7 @@ GameObject:
   - component: {fileID: 4576704454403129303}
   m_Layer: 8
   m_Name: cielingcheck
-  m_TagString: Player
+  m_TagString: PlayerObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2147,7 +2146,7 @@ GameObject:
   - component: {fileID: 1951980904879317047}
   m_Layer: 8
   m_Name: EffectsCanvas
-  m_TagString: Untagged
+  m_TagString: PlayerObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2349,7 +2348,7 @@ GameObject:
   - component: {fileID: 4349567486872859528}
   m_Layer: 8
   m_Name: groundetector
-  m_TagString: Player
+  m_TagString: PlayerObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3018,7 +3017,7 @@ GameObject:
   - component: {fileID: 6130269338738044582}
   m_Layer: 8
   m_Name: ColliderParent
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

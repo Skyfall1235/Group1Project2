@@ -34,18 +34,18 @@ public class Weapon : MonoBehaviour
             if (!other.gameObject.CompareTag("Enemy")) { return; }
         }
         
-        Debug.Log("hitting the target tag");
-        Debug.Log((other.gameObject.GetComponent<HealthManager>() != null));
+        //Debug.Log("hitting the target tag");
+        //Debug.Log((other.gameObject.GetComponent<HealthManager>() != null));
 
         //check and see if the parent has the Hp manager
         
         //if the parent doesnt, check the object itself
         if (other.gameObject.GetComponent<HealthManager>() != null)
         {
-            Debug.Log("getting the health manager");
+            //Debug.Log("getting the health manager");
             targetManager = other.gameObject.GetComponent<HealthManager>();
             targetManager.TakeDamage(damage);
-            Debug.Log("giving damage");
+            //Debug.Log("giving damage");
             if (knockback)
             {
                 if (other.GetComponent<Rigidbody>() != null)
@@ -69,10 +69,10 @@ public class Weapon : MonoBehaviour
 
         else if(other.gameObject.transform.parent.GetComponent<HealthManager>() != null)
         { 
-            Debug.Log("getting the health manager");
+            //Debug.Log("getting the health manager");
             targetManager = other.gameObject.transform.parent.GetComponent<HealthManager>();
             targetManager.TakeDamage(damage);
-            Debug.Log("giving damage");
+            //Debug.Log("giving damage");
             if (knockback)
             {
                 if (other.GetComponent<Rigidbody>() != null)

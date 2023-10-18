@@ -59,7 +59,7 @@ public class BossHealthManager : EnemyHealthmanager
 
     private IEnumerator HandleDamageBehavior()
     {
-        crystalInfo.m_maxBreaks--;
+        crystalInfo.m_maxBreaks -= 1;
         m_canTakeDamage = true;
         m_shield.SetActive(false);
         yield return new WaitForSeconds(m_timeToAttack);
@@ -80,7 +80,7 @@ public class BossHealthManager : EnemyHealthmanager
         {
             soul.SetActive(true);
         }
-        base.Die();
+        gameObject.SetActive(false);
     }
 
 

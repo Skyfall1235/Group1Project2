@@ -51,12 +51,15 @@ public class SustainedTalker : MonoBehaviour
     //method that once is triggers, start going through the dialogs 1 by one, for each text
     private IEnumerator StartChat(Collider other)
     {
+        Debug.Log("finding managers");
         PlayerController pController = other.gameObject.GetComponent<PlayerController>();
         movmentControl movecontrol = other.gameObject.GetComponent<movmentControl>();
+        Debug.Log(pController);
+        Debug.Log(movecontrol);
         if (m_StopPlayer)
         {
             pController.enabled = false;
-            movecontrol.canMove = false;
+            movecontrol.enabled = false;
         }
         
         //for each dialog in the list, 
@@ -105,7 +108,7 @@ public class SustainedTalker : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
         pController.enabled = true;
-        movecontrol.canMove = true;
+        movecontrol.enabled = true;
     }
 }
 

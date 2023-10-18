@@ -70,7 +70,7 @@ public class PlayerCombatController : MonoBehaviour
         //prevent block and attack stacking
         if (!m_canAttack || !m_canAct) { return; }
             StartCoroutine(WeaponAttackCoroutine(e_isFacingRight));
-            Debug.Log("Attacking");
+            //Debug.Log("Attacking");
         
     }
 
@@ -101,7 +101,7 @@ public class PlayerCombatController : MonoBehaviour
         // Calculate the new position of the image and icon.
         Vector3 newColliderPosition = (facingRight ? Vector3.right * m_AttackData.IRLdistance : Vector3.left * m_AttackData.IRLdistance);
 
-        Debug.Log($"IMG {newColliderPosition} ");
+        //Debug.Log($"IMG {newColliderPosition} ");
 
         // Move the image and icon to their new positions over time.
         float t = 0f;
@@ -118,7 +118,7 @@ public class PlayerCombatController : MonoBehaviour
         m_AttackData.collider.transform.localPosition = colliderStart;
 
         // Play the stab animation.
-        Debug.Log("resetting");
+        //Debug.Log("resetting");
 
         m_canAct = true;
     }

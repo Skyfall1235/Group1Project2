@@ -22,6 +22,10 @@ public class StatIncreasePack : MonoBehaviour
         }
         Transform parent = other.transform.parent;
         manager = parent.GetComponent<PlayerHealthManager>();
+        if(manager == null)
+        {
+            return;
+        }
         bool p1 = (manager.m_currentHealth == manager.m_maxHealth);
         bool p2 = (manager.m_armor == manager.m_maxArmor);
         if (p1 && p2)
