@@ -13,6 +13,13 @@ public class PlayerSetter : MonoBehaviour
         StartCoroutine(PlacePlayer());
     }
 
+
+    public void PlayerFellOffMap()
+    {
+        m_playerPrefab.transform.position = transform.position;
+    }
+
+
     private IEnumerator PlacePlayer()
     {
         yield return new WaitForSeconds(0.5f);
@@ -25,7 +32,7 @@ public class PlayerSetter : MonoBehaviour
         {
             m_playerPrefab = playerController.gameObject;
             m_playerPrefab.transform.position = transform.position;
-            //GivePlayerActions("levelTwo");
+            GivePlayerActions("LevelOne");
         }
         
         
@@ -64,13 +71,13 @@ public class PlayerSetter : MonoBehaviour
     {
         //if the level 1 is open, the player shouldnot be able to use block or attack.
         //if it is not the first level, then the player should be able to attack.
-        if(SceneManager.GetSceneByName(sceneName).isLoaded)
+        if(!SceneManager.GetSceneByName(sceneName).isLoaded)
         {
-            m_playerPrefab.GetComponent<PlayerCombatController>().m_canAct = false;
+            m_playerPrefab.GetComponent<PlayerCombatController>().m_canAct = true;
         }
         else
         {
-            m_playerPrefab.GetComponent<PlayerCombatController>().m_canAct = true;
+            m_playerPrefab.GetComponent<PlayerCombatController>().m_canAct = false;
         }
     }
 }

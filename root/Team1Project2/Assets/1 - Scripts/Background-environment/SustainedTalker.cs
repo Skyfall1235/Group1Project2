@@ -51,10 +51,12 @@ public class SustainedTalker : MonoBehaviour
     //method that once is triggers, start going through the dialogs 1 by one, for each text
     private IEnumerator StartChat(Collider other)
     {
-        if(m_StopPlayer)
+        PlayerController pController = other.gameObject.GetComponent<PlayerController>();
+        movmentControl movecontrol = other.gameObject.GetComponent<movmentControl>();
+        if (m_StopPlayer)
         {
-            other.gameObject.GetComponent<movmentControl>().canMove = false;
-            //other.gameObject.GetComponent<>
+            pController.enabled = false;
+            movecontrol.canMove = false;
         }
         
         //for each dialog in the list, 
@@ -102,7 +104,8 @@ public class SustainedTalker : MonoBehaviour
             //little bit of delay for chats so they dont teleport
             yield return new WaitForSeconds(0.5f);
         }
-        other.gameObject.GetComponent<movmentControl>().canMove = true;
+        pController.enabled = true;
+        movecontrol.canMove = true;
     }
 }
 

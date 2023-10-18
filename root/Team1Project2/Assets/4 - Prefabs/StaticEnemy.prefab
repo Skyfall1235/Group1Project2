@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1792488861678454483
 Transform:
   m_ObjectHideFlags: 0
@@ -617,6 +617,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFX_EnemyHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678656166790451677, guid: 5cc5a4f5fab100e468b99c9d451f04ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
