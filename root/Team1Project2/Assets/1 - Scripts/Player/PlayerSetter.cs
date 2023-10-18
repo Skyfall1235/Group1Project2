@@ -16,6 +16,7 @@ public class PlayerSetter : MonoBehaviour
 
     public void PlayerFellOffMap()
     {
+        Debug.Log("player fell off map");
         m_playerPrefab.transform.position = transform.position;
     }
 

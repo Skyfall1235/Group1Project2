@@ -1279,7 +1279,7 @@ GameObject:
   - component: {fileID: 6851215382254704394}
   - component: {fileID: 7072020443762298189}
   m_Layer: 8
-  m_Name: PlayerObject
+  m_Name: PlayerObject1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   controller: {fileID: 4550821241854834807}
   runSpeed: 40
   jump: 0
-  m_hasWings: 0
+  m_hasWings: 1
   m_WingIcon: {fileID: 6251795788524097737}
   m_newJumpForce: 650
   isFacingRight: 1

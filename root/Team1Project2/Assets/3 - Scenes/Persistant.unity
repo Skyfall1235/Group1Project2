@@ -9,7 +9,7 @@ OcclusionCullingSettings:
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: dbe6a03b7feaaf043a8cc86ddb0961bc
-  m_OcclusionCullingData: {fileID: 36300000, guid: 986378148522321449bfa0bbb4e51224,
+  m_OcclusionCullingData: {fileID: 36300000, guid: c29a90db26258a34d9c3f717555ab175,
     type: 2}
 --- !u!104 &2
 RenderSettings:
@@ -325,6 +325,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
+        type: 3}
+      propertyPath: m_sceneNames.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
+        type: 3}
+      propertyPath: m_sceneNames.Array.data[5].m_sceneName
+      value: LevelThree
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
+        type: 3}
+      propertyPath: m_sceneNames.Array.data[6].m_sceneName
+      value: LevelTwoContinued
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446499978410560936, guid: ffcb3af34391d8d4b9a04eef17dda7ce,
+        type: 3}
+      propertyPath: m_sceneNames.Array.data[7].m_sceneName
+      value: LevelTwoContinued
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

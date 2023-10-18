@@ -17,6 +17,6 @@ public class AdvanceToScene : MonoBehaviour
     {
        
        loader.LoadSceneListWithFade(sceneList, activeScene, false);
-        other.gameObject.GetComponent<movmentControl>().canMove = true;
+       other.gameObject.GetComponent<movmentControl>().canMove = true;
     }
 }

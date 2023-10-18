@@ -10,6 +10,12 @@ public class resetFloor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(!other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+        Debug.Log(gameObject.name);
+        Debug.Log("player fell off map from resetfloor");
         FellOffMap.Invoke();
     }
 }

@@ -191,7 +191,7 @@ public class AsyncLoader : MonoBehaviour
 
         // Check if the scene that is wished to be active is loaded
         Scene currentScene = SceneManager.GetSceneByName(activeScene);
-        if (!currentScene.isLoaded)
+        if (!currentScene.isLoaded)//is not loaded
         {
             // Load the active scene asynchronously
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(activeScene, LoadSceneMode.Additive);
@@ -200,6 +200,8 @@ public class AsyncLoader : MonoBehaviour
             {
                 yield return null;
             }
+            Debug.Log(currentScene.name);
+            Debug.Log(activeScene);
             SceneManager.SetActiveScene(currentScene);
         }
 
