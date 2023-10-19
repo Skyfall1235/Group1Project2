@@ -29,6 +29,7 @@ public class PlayerCombatController : MonoBehaviour
 
     [SerializeField]
     private AttackData m_AttackData;
+    private PlayerHealthManager m_HealthManager;
 
     public UnityEvent attackEvent = new UnityEvent();
 
@@ -82,6 +83,7 @@ public class PlayerCombatController : MonoBehaviour
         {
             m_blockData.m_blockCollider.transform.localPosition = new Vector3(-1.4f, 0, 0);
         }
+        m_HealthManager = gameObject.GetComponentInParent<PlayerHealthManager>();
         m_blockData.m_blockCollider.transform.localPosition = new Vector3(1.4f, 0, 0);
         StartCoroutine(BlockCoroutine());
 
@@ -127,8 +129,10 @@ public class PlayerCombatController : MonoBehaviour
         m_canAct = false;
         m_blockData.m_blockCollider.SetActive(true);
         float blockTime = m_blockData.blockTime;
+        m_HealthManager.m_canTakeDamage = false;
         yield return new WaitForSeconds(blockTime);
         m_blockData.m_blockCollider.SetActive(false);
+        m_HealthManager.m_canTakeDamage = true;
         m_canAct = true;
     }
 

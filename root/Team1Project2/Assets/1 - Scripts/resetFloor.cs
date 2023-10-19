@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class resetFloor : MonoBehaviour
 {
-    public Transform ResetPos;
     [SerializeField] private UnityEvent FellOffMap = new UnityEvent();
 
     private void OnTriggerEnter(Collider other)
