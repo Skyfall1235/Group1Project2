@@ -88,6 +88,7 @@ public class GameUIManager : MonoBehaviour
         if (loader != null)
         {
             string[] emptylist = new string[] { "MainMenu" };
+
             
             loader.LoadSceneListWithFade(emptylist, "MainMenu", true);
             SceneManager.UnloadSceneAsync("Player");

@@ -3,6 +3,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 [RequireComponent(typeof(Collider))]
 public class EnemyAttackStatic : MonoBehaviour
 {
@@ -19,6 +21,8 @@ public class EnemyAttackStatic : MonoBehaviour
     public bool Active = false;
     public Coroutine attack = null;
     public bool isFacingRight = true;
+
+    public UnityEvent onAttack = new UnityEvent();
 
 
     private void Update()
@@ -101,7 +105,7 @@ public class EnemyAttackStatic : MonoBehaviour
         // Calculate the new position of the image and icon.
         //Debug.Log("determining collider position");
         Vector3 newColliderPosition = normalizedDirection * attackRange;
-
+        onAttack.Invoke();
         //Debug.Log($"IMG {newColliderPosition} ");
 
         // Move the image and icon to their new positions over time.
@@ -111,6 +115,7 @@ public class EnemyAttackStatic : MonoBehaviour
             t += Time.deltaTime * attackSpeed;
             Vector3 colliderPosition = Vector3.Lerp(colliderStart, newColliderPosition, t);
             weapon.transform.localPosition = colliderPosition;
+            weapon.transform.LookAt(target.transform);
 
             yield return null;
         }
