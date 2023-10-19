@@ -7256,6 +7256,36 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 6214405624070565782, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
     - {fileID: 3925997548868221108, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 5514356148963581199, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 2991884101910559191, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 1696176916890255081, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 5093532128337388486, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 6286636926457147834, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 3353353105239401045, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 8176098223870919289, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 6117583896721083971, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 2573806479207143844, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 2570200228040761409, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 7833112551903355640, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 491689233603029319, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 4022878539002306487, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 5768900201309640419, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 5882726445792531913, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 555799881480156341, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 3877856164222551150, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 8656418944739403435, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 5091476639807489004, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 1496179314018997336, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 8855599491062947601, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 7583215226654202983, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 4330236351410343314, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 6930865919542069449, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 3587260657936521792, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 888331713715096578, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 4472732812922219771, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 3826906415269433847, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 6690709604318164139, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
+    - {fileID: 5620388456955448004, guid: 9e2647e6347e61d46a3cc153cfcc59d7, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2387552444099478481, guid: 9e2647e6347e61d46a3cc153cfcc59d7,
         type: 3}
@@ -19324,12 +19354,16 @@ MonoBehaviour:
   m_canAttack: 1
   m_canBlock: 1
   m_canAct: 1
+  localRight: 0
   m_AttackData:
     stabSpeed: 1
     collider: {fileID: 0}
     IRLdistance: 0
     IGDistanceForIcon: 0
     spearIcon: {fileID: 0}
+  attackEvent:
+    m_PersistentCalls:
+      m_Calls: []
   m_blockData:
     m_blockCollider: {fileID: 1670988285}
     blockTime: 1

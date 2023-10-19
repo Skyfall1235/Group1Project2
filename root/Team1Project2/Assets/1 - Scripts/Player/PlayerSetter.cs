@@ -54,6 +54,7 @@ public class PlayerSetter : MonoBehaviour
         }
     }
 
+
     private int findPlayer(List<DefinedSceneData> sceneData)
     {
         int playerSceneIndex = -1;

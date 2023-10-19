@@ -89,7 +89,10 @@ public class GameUIManager : MonoBehaviour
         {
             string[] emptylist = new string[] { "MainMenu" };
 
-            
+            pausePanel.SetActive(false);
+            DefinedSceneData player = loader.SceneNames[2];
+            player.m_isPersistant = false;
+            loader.SceneNames[2] = player;
             loader.LoadSceneListWithFade(emptylist, "MainMenu", true);
             SceneManager.UnloadSceneAsync("Player");
 
