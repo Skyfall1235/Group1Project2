@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PlayerCombatController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerCombatController : MonoBehaviour
     public bool m_canBlock = false;
     public bool m_canAct = true;
 
+    public bool localRight;
     [System.Serializable]
     private struct AttackData
     {
@@ -27,6 +29,8 @@ public class PlayerCombatController : MonoBehaviour
 
     [SerializeField]
     private AttackData m_AttackData;
+
+    public UnityEvent attackEvent = new UnityEvent();
 
 
     [System.Serializable]
@@ -44,10 +48,6 @@ public class PlayerCombatController : MonoBehaviour
         get { return gameObject.GetComponent<movmentControl>().isFacingRight; }
     }
 
-    private void Start()
-    {
-
-    }
     private void Update()
     {
         if(Input.GetKeyUp(KeyCode.Space) && m_canAct)
@@ -59,7 +59,7 @@ public class PlayerCombatController : MonoBehaviour
             Block();
         }
         
-
+        localRight = e_isFacingRight;
     }
 
     
@@ -87,11 +87,6 @@ public class PlayerCombatController : MonoBehaviour
 
     }
 
-    public void ProjectileAttack()
-    {
-
-    }
-
     private IEnumerator WeaponAttackCoroutine(bool facingRight)
     {
         m_AttackData.collider.SetActive(true);
@@ -99,7 +94,9 @@ public class PlayerCombatController : MonoBehaviour
         Vector2 colliderStart = m_AttackData.collider.transform.localPosition;
 
         // Calculate the new position of the image and icon.
-        Vector3 newColliderPosition = (facingRight ? Vector3.right * m_AttackData.IRLdistance : Vector3.left * m_AttackData.IRLdistance);
+        Vector3 newColliderPosition = Vector3.right * m_AttackData.IRLdistance;
+        //Debug.Log(newColliderPosition);
+        attackEvent.Invoke();
 
         //Debug.Log($"IMG {newColliderPosition} ");
 
@@ -113,6 +110,8 @@ public class PlayerCombatController : MonoBehaviour
 
             yield return null;
         }
+        //Debug.Log("now local position");
+        //Debug.Log(m_AttackData.collider.transform.localPosition);
         yield return new WaitForSeconds(0.1f);
         m_AttackData.collider.SetActive(false);
         m_AttackData.collider.transform.localPosition = colliderStart;
@@ -131,12 +130,6 @@ public class PlayerCombatController : MonoBehaviour
         yield return new WaitForSeconds(blockTime);
         m_blockData.m_blockCollider.SetActive(false);
         m_canAct = true;
-
-    }
-
-    private IEnumerator projectileCoroutine()
-    {
-        return null;
     }
 
 }

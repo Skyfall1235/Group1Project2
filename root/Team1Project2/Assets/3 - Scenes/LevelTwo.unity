@@ -8672,6 +8672,16 @@ PrefabInstance:
       propertyPath: activeScene
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3456124227978108026, guid: fd9280e1863a3404991f55bb5b1b714f,
+        type: 3}
+      propertyPath: sceneList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3456124227978108026, guid: fd9280e1863a3404991f55bb5b1b714f,
+        type: 3}
+      propertyPath: sceneList.Array.data[0]
+      value: LevelThree
+      objectReference: {fileID: 0}
     - target: {fileID: 5701244097282645231, guid: fd9280e1863a3404991f55bb5b1b714f,
         type: 3}
       propertyPath: m_LocalPosition.x

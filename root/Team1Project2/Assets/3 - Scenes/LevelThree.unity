@@ -15383,6 +15383,99 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1748770406
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3636366693121776770, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.008069
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636366693121776770, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 2.0040345
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093616058421869166, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f20742e30b49edd44a72b9223423d1db, type: 3}
+    - target: {fileID: 7269034439133346187, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269034439133346187, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499374170319794525, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundBoxTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.626965
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177181333014186399, guid: 8d11d901170a378499acd65090378d38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d11d901170a378499acd65090378d38, type: 3}
 --- !u!43 &1756598235
 Mesh:
   m_ObjectHideFlags: 0
@@ -21253,3 +21346,4 @@ SceneRoots:
   - {fileID: 1678191244}
   - {fileID: 503114396}
   - {fileID: 2662462133991984348}
+  - {fileID: 1748770406}

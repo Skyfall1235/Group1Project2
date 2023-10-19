@@ -30,13 +30,16 @@ public class movmentControl : MonoBehaviour
             jump = true;
             //Debug.Log(jump);
         }
-        if (horizontalMove >= 0f)
+        if (horizontalMove > 0f)
         {
             isFacingRight = true;
             m_interactionCollider.transform.localPosition = new Vector3(-m_interactionCollider.transform.localPosition.x, m_interactionCollider.transform.localPosition.y, m_interactionCollider.transform.localPosition.z);
         }
-        else isFacingRight = false;
-        m_interactionCollider.transform.localPosition = new Vector3(m_interactionCollider.transform.localPosition.x, m_interactionCollider.transform.localPosition.y, m_interactionCollider.transform.localPosition.z);
+        else if (horizontalMove < 0f)
+        {
+            isFacingRight = false;
+            m_interactionCollider.transform.localPosition = new Vector3(m_interactionCollider.transform.localPosition.x, m_interactionCollider.transform.localPosition.y, m_interactionCollider.transform.localPosition.z);
+        }
         
         //if the local walk area is not 0, we modify it, except when we want to
         if (!directionalWalk)

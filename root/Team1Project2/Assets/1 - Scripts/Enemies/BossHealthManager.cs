@@ -43,6 +43,7 @@ public class BossHealthManager : EnemyHealthmanager
         if(crystalInfo.crystalsLeft == 0 && crystalInfo.m_maxBreaks == 0)
         {
             m_canTakeDamage = true;
+            m_shield.SetActive(false);
         }
     }
 
@@ -59,7 +60,8 @@ public class BossHealthManager : EnemyHealthmanager
 
     private IEnumerator HandleDamageBehavior()
     {
-        crystalInfo.m_maxBreaks -= 1;
+        int localMaxB = crystalInfo.m_maxBreaks - 1;
+        crystalInfo.m_maxBreaks = localMaxB;
         m_canTakeDamage = true;
         m_shield.SetActive(false);
         yield return new WaitForSeconds(m_timeToAttack);
