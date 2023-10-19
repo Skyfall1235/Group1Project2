@@ -16123,6 +16123,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6493806076415903381, guid: ccf841632a3a6a6498d7d53773bb1fde,
+        type: 3}
+      propertyPath: stat
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7614824956401577653, guid: ccf841632a3a6a6498d7d53773bb1fde,
         type: 3}
       propertyPath: m_text
